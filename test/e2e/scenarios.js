@@ -9,19 +9,23 @@ describe('my app', function() {
   });
 
 
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    expect(browser().location().url()).toBe("/view1");
+  it('should automatically redirect to /habitList when location hash/fragment is empty', function() {
+    expect(browser().location().url()).toBe("/habitList");
   });
 
 
-  describe('view1', function() {
+  describe('habitList', function() {
 
     beforeEach(function() {
-      browser().navigateTo('#/view1');
+      browser().navigateTo('#/habitList');
     });
 
+    it('should render a title', function() {
+      expect(element('h1').text()).
+        toMatch(/banner/);
+    });
 
-    it('should render view1 when user navigates to /view1', function() {
+    it('should render the list of habits when user navigates to /habitList', function() {
       expect(element('[ng-view] p:first').text()).
         toMatch(/partial for view 1/);
     });
@@ -29,16 +33,16 @@ describe('my app', function() {
   });
 
 
-  describe('view2', function() {
+  describe('habitDetail', function() {
 
     beforeEach(function() {
-      browser().navigateTo('#/view2');
+      browser().navigateTo('#/habitDetail');
     });
 
 
-    it('should render view2 when user navigates to /view2', function() {
+    it('should render habitDetail when user navigates to /habitDetail', function() {
       expect(element('[ng-view] p:first').text()).
-        toMatch(/partial for view 2/);
+        toMatch(/detail/);
     });
 
   });

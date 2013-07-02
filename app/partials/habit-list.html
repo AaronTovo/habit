@@ -1,0 +1,15 @@
+
+
+
+<form id="habit-form" data-ng-submit="addHabit()">
+  <input id="new-habit" placeholder="Add habit here" data-ng-model="newHabit" autofocus>
+</form>
+
+<div id="habit-list">
+<p>These are your habits</p>
+<ul class="habits">
+  <li data-ng-repeat="habit in habits">
+    <a href="#/habits/{{habit.name}}">{{habit.name}}</a>
+  </li>
+</ul>
+</div>

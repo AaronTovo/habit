@@ -1,4 +1,8 @@
-# angular-seed — the seed for AngularJS apps
+HabitMaker
+
+Software for habit creation by Aaron Tovo, proprietor
+
+This is a mobile app written in AngularJS. It started using angular-seed and has evolved from there.
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
 You can use it to quickly bootstrap your angular webapp projects and dev environment for these
@@ -88,7 +92,7 @@ CloudBees have provided a CI/deployment setup:
 
 <a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/angular-js-clickstart/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
 
-If you run this, you will get a cloned version of this repo to start working on in a private git repo, 
+If you run this, you will get a cloned version of this repo to start working on in a private git repo,
 along with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.
 
 ### Receiving updates from upstream
@@ -118,8 +122,8 @@ fetch the changes and merge them into your project with git.
           angular-*.js      --> angular add-on modules
           version.txt       --> version number
       partials/             --> angular view partials (partial html templates)
-        partial1.html
-        partial2.html
+        partials1.html
+        partials2.html
 
     config/karma.conf.js        --> config file for running unit tests with Karma
     config/karma-e2e.conf.js    --> config file for running e2e tests with Karma

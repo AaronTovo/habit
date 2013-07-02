@@ -1,19 +1,26 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+
+<!-- this is the main layout file -->
+
+<html lang="en" ng-app="habitApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>My Habit</title>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
+  <h1>Habit Maker banner goes here</h1>
   <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
+    <li><a href="#/habitList">habitList</a></li>
+    <li><a href="#/habitDetail">habitDetail</a></li>
   </ul>
 
-  <div ng-view></div>
+  <!-- ng-view div is replaced by the templates in the partials directory as directed
+       by the $routeProvider in app.js
+       -->
+  <div data-ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+  <div>Habit Maker footer goes here. for example version #: v<span data-app-version></span></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
